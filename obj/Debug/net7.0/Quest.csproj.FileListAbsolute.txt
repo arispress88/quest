@@ -1,0 +1,15 @@
+C:\Users\Arnold\workspace\csharp\exercises\Quest\bin\Debug\net7.0\Quest.exe
+C:\Users\Arnold\workspace\csharp\exercises\Quest\bin\Debug\net7.0\Quest.deps.json
+C:\Users\Arnold\workspace\csharp\exercises\Quest\bin\Debug\net7.0\Quest.runtimeconfig.json
+C:\Users\Arnold\workspace\csharp\exercises\Quest\bin\Debug\net7.0\Quest.dll
+C:\Users\Arnold\workspace\csharp\exercises\Quest\bin\Debug\net7.0\Quest.pdb
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.csproj.AssemblyReference.cache
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.AssemblyInfoInputs.cache
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.AssemblyInfo.cs
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.csproj.CoreCompileInputs.cache
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.dll
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\refint\Quest.dll
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.pdb
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\Quest.genruntimeconfig.cache
+C:\Users\Arnold\workspace\csharp\exercises\Quest\obj\Debug\net7.0\ref\Quest.dll

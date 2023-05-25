@@ -25,11 +25,11 @@ namespace Quest
 
             Challenge favoriteBeatle = new Challenge(
                 @"Who's your favorite Beatle?
-    1) John
-    2) Paul
-    3) George
-    4) Ringo
-",
+                1) John
+                2) Paul
+                3) George
+                4) Ringo
+                ",
                 4, 20
             );
 
@@ -57,6 +57,7 @@ namespace Quest
             };
 
             // Loop through all the challenges and subject the Adventurer to them
+            //ASKS THE USER ONE QUESTION AT TIME AS OPPOSED TO ALL AT ONCE
             foreach (Challenge challenge in challenges)
             {
                 challenge.RunChallenge(theAdventurer);
@@ -64,6 +65,7 @@ namespace Quest
 
             // This code examines how Awesome the Adventurer is after completing the challenges
             // And praises or humiliates them accordingly
+            //OUTPUTS A PARTICULAR LINE AT THE END DEPENDING ON THE AWESOMENESS SCORE FROM ADVENTURER.CS
             if (theAdventurer.Awesomeness >= maxAwesomeness)
             {
                 Console.WriteLine("YOU DID IT! You are truly awesome!");
