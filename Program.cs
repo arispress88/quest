@@ -94,6 +94,8 @@ namespace Quest
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
 
+                Prize prize = new Prize("Congrats! You've won a shiny thing!");
+                prize.ShowPrize(theAdventurer);
                 Console.WriteLine("Do you want to play again? (yes/no)");
                 string playAgainInput = Console.ReadLine().ToLower();
                 playAgain = playAgainInput == "yes" || playAgainInput == "y";
