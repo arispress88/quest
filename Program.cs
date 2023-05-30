@@ -71,11 +71,51 @@ namespace Quest
                     favoriteBeatle
                 };
 
+                //5 ADDITIONAL QUESTIONS
+                Challenge mathQuestion = new Challenge("What is the square root of 144?", 12, 15);
+                Challenge teeth = new Challenge("How many teeth does an adult human have?", 32, 20);
+                Challenge football = new Challenge("How many points is a touchdown worth in football?", 6, 10);
+                Challenge yard = new Challenge("How many feet are in a yard?", 3, 10);
+                Challenge basketball = new Challenge("How many players are on the basketball court at a time, per team?", 5, 20);
+
+                List<Challenge> allChallenges = new List<Challenge>()
+                {
+                    twoPlusTwo,
+                    theAnswer,
+                    whatSecond,
+                    guessRandom,
+                    favoriteBeatle,
+                    mathQuestion,
+                    teeth,
+                    football,
+                    yard,
+                    basketball
+                };
+
+                List<Challenge> selectedChallenges = new List<Challenge>();
+                Random random = new Random();
+                int successfulChallenges = 0;
+
+                while (selectedChallenges.Count < 5)
+                {
+                    int randomIndex = random.Next(0, allChallenges.Count);
+                    Challenge randomChallenge = allChallenges[randomIndex];
+
+                    if (!selectedChallenges.Contains(randomChallenge))
+                    {
+                        selectedChallenges.Add(randomChallenge);
+                    }
+                }
+
                 // Loop through all the challenges and subject the Adventurer to them
                 //ASKS THE USER ONE QUESTION AT TIME AS OPPOSED TO ALL AT ONCE
-                foreach (Challenge challenge in challenges)
+                foreach (Challenge challenge in selectedChallenges)
                 {
-                    challenge.RunChallenge(theAdventurer);
+                    bool challengeResult = challenge.RunChallenge(theAdventurer);
+                    if (challengeResult)
+                    {
+                        successfulChallenges++;
+                    }
                 }
 
                 // This code examines how Awesome the Adventurer is after completing the challenges
@@ -99,6 +139,17 @@ namespace Quest
                 Console.WriteLine("Do you want to play again? (yes/no)");
                 string playAgainInput = Console.ReadLine().ToLower();
                 playAgain = playAgainInput == "yes" || playAgainInput == "y";
+
+                if (playAgain)
+                {
+                    int bonusAwesomeness = successfulChallenges * 10; // calculates the bonus for the next quest
+
+                    theAdventurer.Awesomeness += bonusAwesomeness; // adds bonus awesomeness to the initial Awesomeness on the next quest
+
+                    successfulChallenges = 0; //Resets the successful challenges count for the next quest
+                }
+
+                selectedChallenges.Clear();
             }
         }
     }

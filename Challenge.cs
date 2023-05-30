@@ -26,11 +26,23 @@ namespace Quest
 
         // This method will take an Adventurer object and make that Adventurer perform the challenge
         //GIVES FEEDBACK DEPENDING ON THE ANSWER THE USER GIVES
-        public void RunChallenge(Adventurer adventurer)
+        public bool RunChallenge(Adventurer adventurer)
         {
             Console.Write($"{_text}: ");
             string answer = Console.ReadLine();
+            bool isCorrect = answer == _correctAnswer.ToString();
 
+            if (isCorrect)
+            {
+                adventurer.Awesomeness += _awesomenessChange;
+                Console.WriteLine("Correct! You gained {0} awesome points!", _awesomenessChange);
+            }
+            else
+            {
+                adventurer.Awesomeness -= _awesomenessChange;
+                Console.WriteLine("Wrong answer! You lost {0} awesome points.", _awesomenessChange);
+            }
+            
             int numAnswer;
             bool isNumber = int.TryParse(answer, out numAnswer);
 
@@ -47,11 +59,14 @@ namespace Quest
                 Console.WriteLine("You have failed the challenge, there will be consequences.");
                 adventurer.Awesomeness -= _awesomenessChange;
             }
+            
 
             // Note how we call an Adventurer object's method
             //IMPORTS CODE FROM ADVENTURER IN ORDER TO RUN PROPERLY
             Console.WriteLine(adventurer.GetAdventurerStatus());
             Console.WriteLine();
+            return isCorrect;
         }
+        
     }
 }
